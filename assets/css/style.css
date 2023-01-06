@@ -197,7 +197,10 @@ ul, ol {
     text-align: center;
 }
 
-.intro__btn {
+
+/* Btn */
+
+.btn {
     width: 260px;
     height: 60px;
     padding-top: 12px;
@@ -217,10 +220,24 @@ ul, ol {
     transition: color .2s linear, background-color .2s linear;
 }
 
-.intro__btn:hover {
+.btn:hover {
     color: #d4d4d4;
 
     background-color: #3ea2d8;
+}
+
+.btn_litle {
+    display: block;
+    margin: 0 0 0 auto;
+    width: 160px;
+    height: 50px;
+    padding-top: 12px;
+
+    border-radius: 30px;
+
+    font-size: 21px;
+    font-weight: 600;
+    color: #6cb5da;
 }
 
 
@@ -521,4 +538,192 @@ ul, ol {
     font-weight: 400;
     color: #fff;
     opacity: .7;
+}
+
+
+/* Reviews */
+
+.reviews {
+    padding: 120px 300px 60px;
+
+    background-color: #1b1b1b;
+
+    text-align: center;
+}
+
+.reviews_grey {
+    background-color: #000;
+}
+
+.reviews__text {
+    margin-bottom: 45px;
+
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #00c0ff;
+}
+
+.reviews__text-grey {
+    color: rgba(0, 192, 255, 0.6);
+}
+
+.reviews__author {
+    font-weight: 600;
+    font-size: 19px;
+    color: #00c0ff;
+}
+
+.reviews__author-grey {
+    color: rgba(0, 192, 255, 0.6);
+}
+
+
+/* Nature */
+
+.nature {
+    display: flex;
+}
+
+.nature__content {
+    padding: 190px 145px 0;
+    width: 50%;
+
+    background-color: #000;
+
+    text-align: left;
+}
+
+.nature__title {
+    font-weight: 500;
+    font-size: 38px;
+    color: #00c0ff;
+    text-transform: uppercase;
+}
+
+.nature__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #00c0ff;
+    opacity: .7;
+}
+
+.nature__img {
+    width: 50%;
+}
+
+
+/* Buy your tickets */
+
+.buy {
+    position: relative;
+}
+
+.buy__content {
+    width: 300px;
+
+    text-align: right;
+
+    position: absolute;
+    top: 50%;
+    right: 95px;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.buy__title {
+    margin-bottom: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 0.9;
+    color: #fff;
+}
+
+.buy__text {
+    margin-bottom: 40px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* News */
+
+.news {
+    margin-bottom: -20px;
+    padding: 190px 220px 0;
+    background-color: #000;
+}
+
+.news__item {
+    display: flex;
+    margin-bottom: 210px;
+}
+
+.news__content {
+    width: 50%;
+
+    text-align: center;
+}
+
+.news__suptitle {
+    margin-bottom: 5px;
+
+    font-weight: 300;
+    font-size: 17px;
+    color: #00c0ff;
+}
+
+.news__title {
+    margin-bottom: 45px;
+
+    font-weight: 400;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #00c0ff;
+}
+
+.news__text {
+    width: 375px;
+    margin: 0 auto;
+
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: #00c0ff;
+}
+
+.news__img {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+/* Trips */
+
+.trips {
+    display: flex;
+    justify-content: space-between;
+    padding: 85px 200px;
+
+    background-color: #1b1b1b;
+}
+
+.trips__title {
+    margin-bottom: 7px;
+
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.trips__subtitle {
+    font-weight: 400;
+    font-size: 17px;
 }
