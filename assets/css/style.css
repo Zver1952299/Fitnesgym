@@ -58,8 +58,8 @@ ul, ol {
 /* Container */
 
 .container {
-    width: 100%;
     max-width: 1230px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -69,19 +69,20 @@ ul, ol {
 /* Header */
 
 .header {
-    width: 1440px;
+    width: 100%;
     height: 55px;
+    /* padding: 0 50px; */
 
     background-color: #040404;
 
-    position: fixed;
-    top: 40px;
+    /* top: 40px; */
     z-index: 99999;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
 }
 
@@ -149,6 +150,47 @@ ul, ol {
 }
 
 
+/* Burger */
+
+.burger {
+    display: none;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 2px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item::before,
+.burger__item::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item::before {
+    top: -8px;
+}
+
+.burger__item::after {
+    bottom: -8px;
+}
+
+
 /* Intro */
 
 .intro {
@@ -162,7 +204,7 @@ ul, ol {
 }
 
 .intro__inner {
-    width: 770px;
+    max-width: 770px;
     height: 100%;
     margin: 0 auto;
 
@@ -260,8 +302,9 @@ ul, ol {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 860px;
-    height: 515px;
+    max-width: 860px;
+    height: auto;
+    padding: 150px 20px;
     margin: 0 auto;
 }
 
@@ -304,7 +347,7 @@ ul, ol {
 }
 
 .whoarewe__down-item {
-    width: 300px;
+    max-width: 300px;
 }
 
 .whoarewe__down-title {
@@ -342,7 +385,7 @@ ul, ol {
 }
 
 .priorities__header {
-    width: 990px;
+    max-width: 990px;
     margin: 0 auto;
 
     text-align: center;
@@ -359,6 +402,8 @@ ul, ol {
 }
 
 .priorities__text {
+    width: 100%;
+
     font-size: 21px;
     font-weight: 500;
     color: #00c0ff;
@@ -428,7 +473,8 @@ ul, ol {
 
 .wedo {
     width: 100%;
-    min-height: 930px;
+    min-height: auto;
+    padding-bottom: 110px;
 
     background-color: #000;
 }
@@ -442,7 +488,7 @@ ul, ol {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 710px;
+    max-width: 710px;
     height: auto;
     margin: 0 auto;
 }
@@ -470,7 +516,8 @@ ul, ol {
 .wedo__up-links {
     display: flex;
     justify-content: space-between;
-    width: 355px;
+    max-width: 355px;
+    width: 100%;
 }
 
 .wedo__up-link {
@@ -511,7 +558,7 @@ ul, ol {
 }
 
 .wedo__item-text {
-    width: 170px;
+    max-width: 170px;
 
     font-family: "Lora", sans-serif;
     font-size: 16px;
@@ -544,11 +591,20 @@ ul, ol {
 /* Reviews */
 
 .reviews {
-    padding: 120px 300px 60px;
+    margin: 0 auto;
+    padding: 120px 0;
+    max-width: 14400px;
+    width: 100%;
 
     background-color: #1b1b1b;
 
     text-align: center;
+}
+
+.reviews__inner {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .reviews_grey {
@@ -586,12 +642,18 @@ ul, ol {
 }
 
 .nature__content {
-    padding: 190px 145px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
 
     background-color: #000;
 
     text-align: left;
+}
+
+.nature__inner {
+    max-width: 470px;
 }
 
 .nature__title {
@@ -656,13 +718,18 @@ ul, ol {
 /* News */
 
 .news {
-    margin-bottom: -20px;
-    padding: 190px 220px 0;
+    padding: 190px 0;
     background-color: #000;
+}
+
+.news__inner {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .news__item {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 210px;
 }
 
@@ -690,7 +757,7 @@ ul, ol {
 }
 
 .news__text {
-    width: 375px;
+    max-width: 375px;
     margin: 0 auto;
 
     font-weight: 300;
@@ -709,11 +776,18 @@ ul, ol {
 /* Trips */
 
 .trips {
-    display: flex;
-    justify-content: space-between;
-    padding: 85px 200px;
+    padding: 85px 20px;
 
     background-color: #1b1b1b;
+
+    text-align: center;
+}
+
+.trips__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1060px;
+    margin: 0 auto;
 }
 
 .trips__title {
@@ -726,4 +800,622 @@ ul, ol {
 .trips__subtitle {
     font-weight: 400;
     font-size: 17px;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 0;
+
+    background-color: #1b1b1b;
+}
+
+.footer__content {
+    width: 330px;
+}
+
+.footer__title {
+    margin-bottom: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer__text {
+    margin-bottom: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.footer__icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 420px;
+    width: 100%;
+}
+
+.footer__nav-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__nav-title {
+    margin-bottom: 40px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer__nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__nav-item:hover {
+    text-decoration: underline;
+}
+
+
+/* Media */
+
+/* ========================================================================= */
+@media (max-width: 1200px) {
+    
+    /* Nature */
+
+    .nature__inner {
+        padding: 0 30px;
+    }
+
+    /* News */
+
+    .news {
+        padding: 110px 0;
+    }
+
+    .news__item {
+        margin-bottom: 30px;
+    }
+
+    .news__content {
+        padding: 0 20px;
+    }
+}
+
+/* ========================================================================= */
+@media (max-width: 992px) {
+    
+    /* Header */
+
+    .header__nav {
+        display: none;
+    }
+
+    /* Burger */
+
+    .burger {
+        display: block;
+    }
+
+    /* Intro */
+
+    .intro {
+        height: 840px;
+    }
+
+    .intro__text {
+        padding: 0 30px;
+    }
+
+    /* WhoAreWe */
+
+    .whoarewe__container-up {
+        padding: 60px 20px;
+    }
+
+    .whoarewe__up-text {
+        padding: 0 30px;
+    }
+
+    /* Priorities */
+
+    .priorities__item {
+        width: 350px;
+        height: 330px;
+    }
+
+    /* Reviews */
+
+    .reviews {
+        padding: 80px 30px;
+    }
+
+    /* Nature */
+
+    .nature__inner {
+        padding: 0 30px;
+    }
+
+    .nature__title {
+        font-size: 28px;
+    }
+
+    .nature__text {
+        font-size: 16px;
+    }
+
+    /* Footer */
+
+    .footer__nav {
+        max-width: 295px;
+    }
+}
+
+/* ========================================================================= */
+@media (max-width: 768px) {
+   
+    /* Intro */
+
+    .intro {
+        height: 770px;
+    }
+
+    .intro__title {
+        font-size: 140px;
+    }
+
+    /* Btn */
+
+    .btn {
+        margin-bottom: 110px;
+    }
+
+    /* Who are we */
+
+    .whoarewe__up-title {
+        font-size: 26px;
+    }
+
+    .whoarewe__up-text {
+        font-size: 14px;
+    }
+
+    /* Priorities */
+
+    .priorities__item {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* WeDo */
+
+    .wedo__container-up {
+        margin: 0 30px;
+    }
+
+    .wedo__up-text {
+        margin-bottom: 50px;
+    }
+
+    .wedo__item {
+        padding: 0 15px;
+    }
+
+    .wedo__item-text {
+        font-size: 12px;
+    }
+
+    /* Reviews */
+
+    .reviews {
+        padding: 40px 30px;
+    }
+
+    /* Nature */
+
+    .nature__inner {
+        padding: 20px 30px;
+    }
+
+    .nature__title {
+        font-size: 19px;
+    }
+
+    .nature__text {
+        font-size: 11px;
+    }
+
+    /* Buy */
+
+    .buy__content {
+        width: 250px;
+
+        top: 70%;
+        right: 30px;
+    }
+
+    .buy__title {
+        font-size: 40px;
+    }
+
+    .buy__text {
+        font-size: 14px;
+    }
+
+    /* News */
+
+    .news {
+        padding: 90px 0;
+    }
+
+    /* Trips */
+
+    .trips {
+        padding: 55px 20px;
+    }
+
+    .trips__inner {
+        flex-direction: column;
+    }
+
+    .trips__item {
+        padding-bottom: 30px;
+    }
+
+    .trips__item:last-child {
+        padding-bottom: 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 45px 0;
+
+        text-align: center;
+    }
+
+    .footer__content {
+        padding-bottom: 40px;
+    }
+
+    .footer__icons {
+        justify-content: center;
+    }
+
+    .footer__nav {
+        max-width: 440px;
+        justify-content: space-around;
+    }
+}
+
+/* ========================================================================= */
+@media (max-width: 576px) {
+
+    /* Intro */
+
+    .intro {
+        height: 738px;
+    }
+
+    .intro__title {
+        font-size: 94px;
+    }
+
+    /* Btn */
+
+    .btn {
+        margin-bottom: 105px;
+    }
+
+    .btn_litle {
+        width: 80px;
+        height: 30px;
+        padding-top: 5px;
+
+        font-size: 15px;
+    }
+
+    /* Priorities */
+
+    .priorities__item {
+        width: 100%;
+        height: 180px;
+    }
+        
+    /* WeDo */
+
+    .wedo {
+        min-height: 855px;
+    }
+
+    .wedo__up-title {
+        margin-top: 60px;
+
+        font-size: 24px;
+    }
+
+    /* Nature */
+
+    .nature__title {
+        font-size: 16px;
+    }
+
+    .nature__text {
+        font-size: 9px;
+    }
+
+    /* Buy */
+
+    .buy__title {
+        margin-bottom: 12px;
+
+        font-size: 22px;
+    }
+
+    .buy__text {
+        margin-bottom: 24px;
+    }
+
+    /* News */
+
+    .news {
+        padding: 50px 0;
+    }
+
+    .news__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .news__suptitle {
+        font-size: 10px;
+    }
+
+    .news__title {
+        font-size: 12px;
+    }
+
+    .news__text {
+        font-size: 10px;
+    }
+}
+
+/* ========================================================================= */
+@media (max-width: 375px) {
+    
+    /* Intro */
+
+    .intro {
+        height: 635px;
+    }
+
+    .intro__title {
+        margin-bottom: 36px;
+    }
+
+    .intro__text {
+        margin-bottom: 55px;
+    }
+    
+    /* Btn */
+
+    .btn {
+        margin-bottom: 65px;
+    }
+
+    /* Priorities */
+
+    .priorities__title {
+        margin: 55px 0 20px;
+    }
+
+    .priorities__items {
+        margin: 30px 0 50px;
+    }
+
+    /* WeDo */
+    
+    .wedo {
+        min-height: 890px;
+    }
+
+    .wedo__up-title {
+        margin-top: 60px;
+
+        font-size: 22px;
+    }
+
+    .wedo__up-text {
+        margin-bottom: 50px;
+    }
+
+    .wedo__item-text {
+        font-size: 12px;
+    }
+
+    /* News */
+
+    .news__item {
+        margin-bottom: 5px;
+    }
+}
+
+/* ========================================================================= */
+@media (max-height: 820px) {
+   
+    /* Intro */
+   
+    .intro {
+        height: 765px;
+    }
+
+    /* WhoAreWe */
+
+    .whoarewe__container-down {
+        min-height: 300px;
+    }
+
+    /* Who are we */
+
+    .whoarewe__container-up {
+        padding: 60px 20px;
+    }
+
+    /* Priorities */
+
+    .priorities__item {
+        width: 360px;
+    }
+
+    /* WeDo */
+
+    .wedo {
+        padding-bottom: 70px;
+    }
+
+    .wedo__up-title {
+        margin: 60px 0 10px;
+    }
+
+    .wedo__up-text {
+        margin-bottom: 40px;
+    }
+
+    .wedo__content {
+        margin-top: 60px;
+    }
+
+    /* Reviews */
+
+    .reviews {
+        padding: 80px 0;
+    }
+}
+
+/* ========================================================================= */
+@media (max-height: 375px) {
+    
+    /* intro */
+    
+    .intro {
+        height: 520px;
+    }
+
+    .intro__title {
+        margin-bottom: 40px;
+    }
+
+    .intro__text {
+        margin-bottom: 60px;
+    }
+
+    .btn {
+        margin-bottom: 70px;
+    }
+
+    /* Who are we */
+
+    .whoarewe__container-down {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    /* Priorities */
+
+    .priorities__title {
+        margin: 50px 0 15px;
+    }
+
+    .priorities__items {
+        margin: 25px 0 70px;
+    }
+
+    .priorities__item {
+        width: 300px;
+    }
+
+    /* News */
+
+    .news {
+        padding: 60px 0;
+    }
+
+    .news__item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Trips */
+
+    .trips {
+        padding: ;
+    }
+
+    .trips__inner {
+        flex-direction: row;
+    }
+
+    .trips__item {
+        padding: 0 20px;
+    }
+
+    .trips__title {
+        font-size: 16px;
+    }
+
+    .trips__subtitle {
+        font-size: 12px;
+    }
+
+    /* REviews */
+
+    .reviews {
+        padding: 50px 0;
+    }
+
+    /* Footer */
+
+    .footer__title {
+        font-size: 21px;
+    }
+
+    .footer__text {
+        font-size: 12px;
+    }
+
+    .footer__nav-title {
+        margin-bottom: 10px;
+
+        font-size: 16px;
+    }
+
+    .footer__nav-item {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 667px) and (max-width: 375px) {
+    .intro {
+        height: 620px;
+    }
 }
